@@ -1,0 +1,61 @@
+In terminal
+pip install fastapi uvicorn
+python -m uvicorn main:app --reload
+
+In browser
+http://127.0.0.1:8000
+http://127.0.0.1:8000/docs // 自动生成 API 文档
+
+localhost（本机地址）
+127.0.0.0 - 127.255.255.255
+都被保留为：👉 本地回环地址（loopback）
+最常用：127.0.0.1
+是 操作系统定义的
+
+一个电脑可以运行多个服务clients
+clients用 端口号区分
+since we run uvicorn main:app --reload
+uvicorn 默认 port = 8000
+
+FastAPI 是 Web API 框架
+一个 Web 服务器, like google but 只是运行在本地电脑
+
+In terminal
+安装库 pip install google-genai
+设置 API Key set GEMINI_API_KEY=set AIzaSyB4CfskqhOSXl5xc08G6IefJ0GA3o9IXqM_api_key
+
+.env 文件 Environment Variables
+
+http://127.0.0.1:8000/chat2
+
+create .env file: New → File ->.env (no .txt)
+in terminal: pip install python-dotenv
+add:
+import os
+from dotenv import load_dotenv
+
+.gitignore add .env
+
+How to add GIT
+create a new repo on github
+install git in pycharm
+git --version
+in pycharm terminal: generate SSH key
+ssh-keygen -t ed25519 -C "lihsuantj@gmail.com"
+Enter
+cat C:\Users\lihsu/.ssh/id_ed25519.pub
+复制整行输出
+加到 GitHub
+GitHub → Settings → SSH and GPG keys → New SSH key
+粘贴刚才复制的内容 → 保存
+terminal:
+ssh -T git@github.com
+看到
+Hi yourname! You've successfully authenticated
+# 克隆旧 repo
+git clone git@github.com:newsgae/fastapi-gemini-chat.git
+# 或者在已有本地项目里
+git remote add origin git@github.com:newsgae/fastapi-gemini-chat.git
+git config --global --add safe.directory C:/Users/lihsu/PyCharmMiscProject
+
+
